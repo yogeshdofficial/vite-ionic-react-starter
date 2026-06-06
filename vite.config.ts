@@ -4,13 +4,19 @@ import babel from "@rolldown/plugin-babel";
 import legacy from "@vitejs/plugin-legacy";
 import path from "path";
 import { fileURLToPath } from "url";
+import tailwindcss from "@tailwindcss/vite";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), babel({ presets: [reactCompilerPreset()] }), legacy()],
+  plugins: [
+    react(),
+    tailwindcss(),
+    babel({ presets: [reactCompilerPreset()] }),
+    legacy(),
+  ],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

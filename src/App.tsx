@@ -10,6 +10,8 @@ import {
 } from "@ionic/react";
 import { IonReactRouter } from "@ionic/react-router";
 
+import "@/index.css";
+
 /* Core CSS required for Ionic components to work properly */
 import "@ionic/react/css/core.css";
 

@@ -22,6 +22,7 @@ export default function HomeTab() {
           </IonToolbar>
         </IonHeader>
 
+        <p className="text-orange-400">Ionic Vite</p>
         <div id="container">
           <strong>Ready to create an app?</strong>
           <p>
