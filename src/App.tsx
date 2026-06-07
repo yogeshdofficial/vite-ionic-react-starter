@@ -34,41 +34,44 @@ import "@ionic/react/css/palettes/dark.system.css";
 
 /* Theme variables */
 import "@/theme/variables.css";
-import HomeTab from "./pages/HomeTab";
+import HomeTab from "./app/pages/HomeTab";
 import { Redirect, Route } from "react-router-dom";
-import QuestionsTab from "./pages/QuestionsTab";
+import QuestionsTab from "./app/pages/QuestionsTab";
 import { square, triangle } from "ionicons/icons";
+import Provider from "./app/Provider";
 
 setupIonicReact();
 
 export default function App() {
   return (
-    <IonApp>
-      <IonReactRouter>
-        <IonTabs>
-          <IonRouterOutlet>
-            <Route exact path="/home">
-              <HomeTab />
-            </Route>
-            <Route exact path="/">
-              <Redirect to="/home" />
-            </Route>
-            <Route exact path="/questions">
-              <QuestionsTab />
-            </Route>
-          </IonRouterOutlet>
-          <IonTabBar slot="bottom">
-            <IonTabButton tab="home" href="/home">
-              <IonIcon aria-hidden="true" icon={triangle} />
-              <IonLabel>Home</IonLabel>
-            </IonTabButton>
-            <IonTabButton tab="questions" href="/questions">
-              <IonIcon aria-hidden="true" icon={square} />
-              <IonLabel>Questions</IonLabel>
-            </IonTabButton>
-          </IonTabBar>
-        </IonTabs>
-      </IonReactRouter>
-    </IonApp>
+    <Provider>
+      <IonApp>
+        <IonReactRouter>
+          <IonTabs>
+            <IonRouterOutlet>
+              <Route exact path="/home">
+                <HomeTab />
+              </Route>
+              <Route exact path="/">
+                <Redirect to="/home" />
+              </Route>
+              <Route exact path="/questions">
+                <QuestionsTab />
+              </Route>
+            </IonRouterOutlet>
+            <IonTabBar slot="bottom">
+              <IonTabButton tab="home" href="/home">
+                <IonIcon aria-hidden="true" icon={triangle} />
+                <IonLabel>Home</IonLabel>
+              </IonTabButton>
+              <IonTabButton tab="questions" href="/questions">
+                <IonIcon aria-hidden="true" icon={square} />
+                <IonLabel>Questions</IonLabel>
+              </IonTabButton>
+            </IonTabBar>
+          </IonTabs>
+        </IonReactRouter>
+      </IonApp>
+    </Provider>
   );
 }

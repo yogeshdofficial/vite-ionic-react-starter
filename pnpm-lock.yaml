@@ -35,6 +35,9 @@ importers:
       ionicons:
         specifier: ^8.0.13
         version: 8.0.13
+      konsta:
+        specifier: ^5.1.0
+        version: 5.1.0
       react:
         specifier: ^19.2.6
         version: 19.2.7
@@ -1695,6 +1698,10 @@ packages:
     resolution: {integrity: sha512-o+NO+8WrRiQEE4/7nwRJhN1HWpVmJm511pBHUxPLtp0BUISzlBplORYSmTclCnJvQq2tKu/sgl3xVpkc7ZWuQQ==}
     engines: {node: '>=6'}
 
+  konsta@5.1.0:
+    resolution: {integrity: sha512-ZY6DgYCGTJioHKECp7O4ZevkljprJu9zZHkSxzPkE/BlGL05XeTvTjLnB+RHqJovQRStzMSSqvM5wO5uzWOlvw==}
+    engines: {node: '>= 4.7.0'}
+
   levn@0.4.1:
     resolution: {integrity: sha512-+bT2uH4E5LGE7h/n3evcS/sQlJXCpIp6ym8OWJ5eV6+67Dsql/LaaT7qJBAt2rzfoa/5QBGBhxDix1dMt2kQKQ==}
     engines: {node: '>= 0.8.0'}
@@ -2044,6 +2051,9 @@ packages:
 
   systemjs@6.15.1:
     resolution: {integrity: sha512-Nk8c4lXvMB98MtbmjX7JwJRgJOL8fluecYCfCeYBznwmpOs8Bf15hLM6z4z71EDAhQVrQrI+wt1aLWSXZq+hXA==}
+
+  tailwind-merge@3.6.0:
+    resolution: {integrity: sha512-uxL7qAVQriqRQPAyK3pj66VqskWqoZ37PW94jwOTwNfq/z9oyu1V+eqrZqtR2+fCiXdYOZe/Modt8GtvqNzu+w==}
 
   tailwindcss@4.3.0:
     resolution: {integrity: sha512-y6nxMGB1nMW9R6k96e5gdIFzcfL/gTJRNaqGes1YvkLnPVXzWgbqFF2yLC0T8G774n24cx3Pe8XrKoniCOAH+Q==}
@@ -4060,6 +4070,10 @@ snapshots:
 
   kleur@4.1.5: {}
 
+  konsta@5.1.0:
+    dependencies:
+      tailwind-merge: 3.6.0
+
   levn@0.4.1:
     dependencies:
       prelude-ls: 1.2.1
@@ -4400,6 +4414,8 @@ snapshots:
   supports-preserve-symlinks-flag@1.0.0: {}
 
   systemjs@6.15.1: {}
+
+  tailwind-merge@3.6.0: {}
 
   tailwindcss@4.3.0: {}
 
